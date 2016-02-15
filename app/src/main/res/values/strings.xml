@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Mini_Project1</string>
+
+    <string name="home_name">Photo Editor</string>
+
+    <string name="gallery_button">Gallery</string>
+    <string name="camera_button">Camera</string>
+</resources>
