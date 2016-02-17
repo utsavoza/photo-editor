@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+  <groupId>com.adobe.creativesdk.foundation</groupId>
+  <artifactId>assetcore</artifactId>
+  <version>0.7.326</version>
+  <versioning>
+    <latest>0.7.329</latest>
+    <release>0.7.329</release>
+    <versions>
+      <version>0.7.326</version>
+      <version>0.7.329</version>
+    </versions>
+    <lastUpdated>20151028093937</lastUpdated>
+  </versioning>
+</metadata>
