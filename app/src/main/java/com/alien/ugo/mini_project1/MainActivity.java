@@ -1,8 +1,10 @@
 package com.alien.ugo.mini_project1;
 
+import android.content.Context;
 import android.content.Intent;
 import android.graphics.BitmapFactory;
 import android.net.Uri;
+import android.os.Environment;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -15,11 +17,14 @@ import com.aviary.android.feather.sdk.AviaryIntent;
 import com.aviary.android.feather.sdk.IAviaryClientCredentials;
 
 import java.io.File;
+import java.io.FileOutputStream;
+import java.net.URI;
 
 public class MainActivity extends AppCompatActivity {
 
     private static Uri imageUri;
     private static ImageView imageView;
+    private static final String fileName = "Aliens_Images";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,12 +42,6 @@ public class MainActivity extends AppCompatActivity {
 
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-        try {
-            if(resultCode == RESULT_OK) {
-                imageView.setImageURI(imageUri);
-            }
-        } catch(Exception e) {
-            e.printStackTrace();
-        }
+        finish();
     }
 }

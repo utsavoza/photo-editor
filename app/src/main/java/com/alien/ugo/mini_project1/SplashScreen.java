@@ -7,7 +7,7 @@ import android.os.Bundle;
 
 public class SplashScreen extends AppCompatActivity {
 
-    private int DURATION = 2000;
+    private int DURATION = 1500;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
