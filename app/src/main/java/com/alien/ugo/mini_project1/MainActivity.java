@@ -7,18 +7,10 @@ import android.net.Uri;
 import android.os.Environment;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.ImageView;
 
-import com.adobe.creativesdk.foundation.AdobeCSDKFoundation;
-import com.adobe.creativesdk.foundation.auth.IAdobeAuthClientCredentials;
-import com.adobe.creativesdk.foundation.internal.auth.AdobeAuthIMSEnvironment;
-import com.aviary.android.feather.sdk.AviaryIntent;
-import com.aviary.android.feather.sdk.IAviaryClientCredentials;
+import com.adobe.creativesdk.aviary.AdobeImageIntent;
 
-import java.io.File;
-import java.io.FileOutputStream;
-import java.net.URI;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -34,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
         imageUri = HomeScreen.image;
         imageView = (ImageView)findViewById(R.id.main_image);
 
-        Intent imageUI = new AviaryIntent.Builder(this)
+        Intent imageUI = new AdobeImageIntent.Builder(this)
                 .setData(imageUri)
                 .build();
         startActivityForResult(imageUI, 1);

@@ -2,9 +2,9 @@ package com.alien.ugo.mini_project1;
 
 import android.app.Application;
 
+import com.adobe.creativesdk.aviary.IAviaryClientCredentials;
 import com.adobe.creativesdk.foundation.AdobeCSDKFoundation;
-import com.adobe.creativesdk.foundation.internal.auth.AdobeAuthIMSEnvironment;
-import com.aviary.android.feather.sdk.IAviaryClientCredentials;
+
 
 /**
  * Created by vastu5996 on 21-02-2016.
@@ -17,15 +17,7 @@ public class MainApplication extends Application implements IAviaryClientCredent
     @Override
     public void onCreate() {
         super.onCreate();
-        AdobeCSDKFoundation.initializeCSDKFoundation(
-                getApplicationContext(),
-                AdobeAuthIMSEnvironment.AdobeAuthIMSEnvironmentProductionUS
-        );
-    }
-
-    @Override
-    public String getBillingKey() {
-        return "";
+        AdobeCSDKFoundation.initializeCSDKFoundation(getApplicationContext());
     }
 
     @Override
@@ -36,5 +28,10 @@ public class MainApplication extends Application implements IAviaryClientCredent
     @Override
     public String getClientSecret() {
         return CREATIVE_SDK_CLIENT_SECRET;
+    }
+
+    @Override
+    public String getBillingKey() {
+        return "";
     }
 }

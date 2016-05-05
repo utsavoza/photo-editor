@@ -9,8 +9,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 
-import com.aviary.android.feather.sdk.AviaryIntent;
-
 public class HomeScreen extends AppCompatActivity {
 
     private static int RESULT_LOAD = 1;
