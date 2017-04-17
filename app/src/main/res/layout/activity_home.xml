@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/blackPrimary"
+                tools:context="com.alienage.android.imageeditor.HomeActivity">
+
+    <ImageView
+        android:id="@+id/home_background"
+        android:layout_centerInParent="true"
+        android:src="@drawable/astro_logo"
+        android:scaleType="centerCrop"
+        android:layout_width="250dp"
+        android:layout_height="250dp" />
+
+    <LinearLayout
+        android:id="@+id/title_home"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="75dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+        <ImageView
+            android:id="@+id/home_logo"
+            android:src="@drawable/alienage_logo"
+            android:layout_width="40dp"
+            android:layout_height="40dp" />
+        <TextView
+            android:text="@string/app_name"
+            android:textSize="25sp"
+            android:textColor="@color/whitePrimary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_alignParentBottom="true"
+        android:gravity="bottom"
+        android:layout_below="@id/title_home"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="25dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_marginRight="65dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/camera_button_image"
+                android:src="@drawable/ic_camera_alt_white_48dp"
+                android:layout_centerHorizontal="true"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:onClick="openCamera"/>
+            <TextView
+                android:id="@+id/camera_button_text"
+                android:text="@string/camera_button_text"
+                android:layout_marginTop="7dp"
+                android:layout_below="@id/camera_button_image"
+                android:textColor="@color/whitePrimary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/gallery_button_image"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/ic_phone_android_white_48dp"
+                android:layout_width="40dp"
+                android:layout_height="40dp"/>
+
+            <TextView
+                android:id="@+id/gallery_button_text"
+                android:layout_below="@id/gallery_button_image"
+                android:layout_marginTop="7dp"
+                android:textColor="@color/whitePrimary"
+                android:text="@string/gallery_button_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>
