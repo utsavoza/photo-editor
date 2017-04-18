@@ -9,5 +9,5 @@ Alienator is a simple image editing android application, that makes use of [Adob
 
 ### Screenshots
 
-<img src="screenshots/home_screen.png" width="35%" align="left" />
-<img src="screenshots/main_application.png" width="35%" align="left" hspace="20" />
+<img src="screenshots/home_activity_framed.png" width="35%" align="left" />
+<img src="screenshots/main_activity_framed.png" width="35%" align="left" hspace="20" />

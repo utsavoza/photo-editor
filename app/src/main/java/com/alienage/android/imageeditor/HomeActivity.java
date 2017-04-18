@@ -53,7 +53,11 @@ public class HomeActivity extends AppCompatActivity implements View.OnClickListe
     public void onClick(View view) {
         int id = view.getId();
         if (id == R.id.camera_button_image || id == R.id.camera_button_text) {
-            checkPermissionAndDispatchIntent();
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+                checkPermissionAndDispatchIntent();
+            } else {
+                dispatchImageCaptureIntent();
+            }
         } else if (id ==R.id.gallery_button_image || id == R.id.gallery_button_text) {
             Intent galleryIntent = new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
             startActivityForResult(galleryIntent, GALLERY_RESULT);
