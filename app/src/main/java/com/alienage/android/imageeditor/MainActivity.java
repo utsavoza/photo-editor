@@ -35,10 +35,12 @@ public class MainActivity extends AppCompatActivity {
 
         // 3. Start the ImageEditor UI
         startActivityForResult(imageEditorIntent, IMAGE_EDITOR_RESULT);
+
+        // Comment this out to receive edited image
         finish();
     }
 
-    // Do something with the edited image ...
+    // Do something with the edited image
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);

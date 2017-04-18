@@ -11,9 +11,9 @@ import com.adobe.creativesdk.foundation.auth.IAdobeAuthClientCredentials;
 
 public class MainApplication extends Application implements IAdobeAuthClientCredentials {
 
-    private static final String CREATIVE_SDK_CLIENT_ID      = "<CLIENT ID>";
-    private static final String CREATIVE_SDK_CLIENT_SECRET  = "<CLIENT SECRET>";
-    private static final String CREATIVE_SDK_REDIRECT_URI   = "<REDIRECT URI>";
+    private static final String CREATIVE_SDK_CLIENT_ID      = "<-- CLIENT ID -->";
+    private static final String CREATIVE_SDK_CLIENT_SECRET  = "<-- CLIENT SECRET -->";
+    private static final String CREATIVE_SDK_REDIRECT_URI   = "<-- REDIRECT URI -->";
     private static final String[] CREATIVE_SDK_SCOPES = {"email", "profile", "address"};
 
     @Override
