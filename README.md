@@ -1,4 +1,4 @@
-# Alienator
+# Photo Editor
 
 *A simplified photo editing application*
 
