@@ -26,8 +26,8 @@ class references, and more.
 
 Screenshots
 -----------
-![Screenshots](/screenshots/home_activity_framed.png)
-![Screenshots](/screenshots/main_activity_framed.png)
+<img src="screenshots/home_activity_framed.png" width="35%" align="left" />
+<img src="screenshots/main_activity_framed.png" width="35%" align="left" hspace="20" />
 
 License
 -------
