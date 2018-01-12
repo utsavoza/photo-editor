@@ -18,11 +18,13 @@
     </activity>
     <activity
         android:name="com.utsavoza.imageeditor.HomeActivity"
+        android:screenOrientation="portrait"
         android:theme="@style/MyAppTheme">
     </activity>
 
     <activity
         android:name="com.utsavoza.imageeditor.SplashActivity"
+        android:screenOrientation="portrait"
         android:theme="@style/MyAppTheme">
       <intent-filter>
         <action android:name="android.intent.action.MAIN"/>
