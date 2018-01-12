@@ -1,8 +1,8 @@
 Photo Editor
 ============
 
-A simple photo editing android application with 
-[Adobe I/O](https://www.adobe.io/apis/creativecloud/creativesdk.html)'s image editor UI. 
+A simple photo editing android application with
+[Adobe I/O](https://www.adobe.io/apis/creativecloud/creativesdk.html)'s image editor UI.
 
 Instructions
 --------
@@ -21,13 +21,15 @@ In order to run the application
 
 More resources for the Creative SDK
 -----------------------------------
-[Visit Adobe I/O](https://www.adobe.io/apis/creativecloud/creativesdk.html) for component guides, 
+[Visit Adobe I/O](https://www.adobe.io/apis/creativecloud/creativesdk.html) for component guides,
 class references, and more.
 
 Screenshots
 -----------
-<img src="screenshots/home_activity_framed.png" width="35%" align="left" />
-<img src="screenshots/main_activity_framed.png" width="35%" align="left" hspace="20" />
+<img src="screenshots/home_activity_framed.png" width="25%" align="left" />
+<img src="screenshots/main_activity_framed.png" width="25%" hspace="20" />
+
+
 
 License
 -------
