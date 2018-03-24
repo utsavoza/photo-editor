@@ -3,21 +3,18 @@ package com.utsavoza.imageeditor;
 import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.widget.ImageView;
-
 import com.adobe.creativesdk.aviary.AdobeImageIntent;
 import com.alienage.android.imageeditor.R;
 
 public class MainActivity extends AppCompatActivity {
 
-  private static final String TAG = MainActivity.class.getName();
-  private static final int IMAGE_EDITOR_RESULT = 1;
-
   public static final String IMAGE_URI = "IMAGE_URI_KEY";
-
+  private static final String TAG = "MainActivity";
+  private static final int IMAGE_EDITOR_RESULT = 1;
   private ImageView mEditedImageView;
 
   @Override protected void onCreate(Bundle savedInstanceState) {
@@ -52,6 +49,9 @@ public class MainActivity extends AppCompatActivity {
             }
           }
           break;
+
+        default:
+          throw new IllegalArgumentException("Unexpected request code");
       }
     }
   }

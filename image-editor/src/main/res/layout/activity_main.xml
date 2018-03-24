@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorPrimary"
-    tools:context="com.alienage.android.imageeditor.com.utsavoza.imageeditor.MainActivity">
+    tools:context="com.utsavoza.imageeditor.MainActivity">
 
   <ImageView
       android:id="@+id/edited_image_view"

@@ -6,6 +6,7 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
 import android.provider.MediaStore;
+import android.provider.MediaStore.Images.Media;
 import android.support.annotation.NonNull;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
@@ -19,6 +20,7 @@ import java.io.File;
 import java.io.IOException;
 import java.text.DateFormat;
 import java.util.Date;
+import java.util.Objects;
 
 import static android.Manifest.permission.CAMERA;
 import static android.Manifest.permission.READ_EXTERNAL_STORAGE;
@@ -27,12 +29,12 @@ import static android.content.pm.PackageManager.PERMISSION_GRANTED;
 
 public class HomeActivity extends AppCompatActivity {
 
-  private static final String TAG = HomeActivity.class.getName();
+  private static final String TAG = "HomeActivity";
   private static final int GALLERY_RESULT = 1;
   private static final int CAMERA_RESULT = 2;
-  private static final String FILE_PROVIDER_AUTHORITY = "com.utsavoza.android.imageeditor";
+  private static final String FILE_PROVIDER_AUTHORITY = "com.utsavoza.imageeditor";
   private static final int CAMERA_PERMISSION_REQ_CODE = 1001;
-  private static final int STORAGE_PERMISSION = 1002;
+  private static final int STORAGE_PERMISSION_REQ_CODE = 1002;
 
   private String mCapturedImagePath;
 
@@ -42,51 +44,29 @@ public class HomeActivity extends AppCompatActivity {
   }
 
   public void openCamera(View view) {
+    // check for camera permission if not granted before
     if (ContextCompat.checkSelfPermission(this, CAMERA) != PERMISSION_GRANTED) {
-      ActivityCompat.requestPermissions(this, new String[] { CAMERA }, CAMERA_PERMISSION_REQ_CODE);
+      String[] cameraPermission = {CAMERA};
+      ActivityCompat.requestPermissions(this, cameraPermission, CAMERA_PERMISSION_REQ_CODE);
     } else {
       dispatchImageCaptureIntent();
     }
   }
 
   public void openGallery(View view) {
-    if (ContextCompat.checkSelfPermission(this, READ_EXTERNAL_STORAGE) != PERMISSION_GRANTED
-        || ContextCompat.checkSelfPermission(this, WRITE_EXTERNAL_STORAGE) != PERMISSION_GRANTED) {
-      ActivityCompat.requestPermissions(this,
-          new String[] { READ_EXTERNAL_STORAGE, WRITE_EXTERNAL_STORAGE }, STORAGE_PERMISSION);
+    // check for storage permission if not granted before
+    if (ContextCompat.checkSelfPermission(this, READ_EXTERNAL_STORAGE) != PERMISSION_GRANTED ||
+        ContextCompat.checkSelfPermission(this, WRITE_EXTERNAL_STORAGE) != PERMISSION_GRANTED) {
+      String[] storagePermissions = {READ_EXTERNAL_STORAGE, WRITE_EXTERNAL_STORAGE};
+      ActivityCompat.requestPermissions(this, storagePermissions, STORAGE_PERMISSION_REQ_CODE);
     } else {
       dispatchGalleryIntent();
     }
   }
 
   private void dispatchGalleryIntent() {
-    Intent galleryIntent =
-        new Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
+    Intent galleryIntent = new Intent(Intent.ACTION_PICK, Media.EXTERNAL_CONTENT_URI);
     startActivityForResult(galleryIntent, GALLERY_RESULT);
-  }
-
-  @Override public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions,
-      @NonNull int[] grantResults) {
-    super.onRequestPermissionsResult(requestCode, permissions, grantResults);
-    switch (requestCode) {
-      case CAMERA_PERMISSION_REQ_CODE:
-        if (grantResults[0] == PERMISSION_GRANTED) {
-          dispatchImageCaptureIntent();
-        } else {
-          Toast.makeText(this, "Required camera permission not granted", Toast.LENGTH_SHORT).show();
-        }
-        break;
-      case STORAGE_PERMISSION:
-        if (grantResults[0] == PERMISSION_GRANTED) {
-          dispatchGalleryIntent();
-        } else {
-          Toast.makeText(this, "Required storage permission not granted", Toast.LENGTH_SHORT)
-              .show();
-        }
-        break;
-      default:
-        throw new IllegalArgumentException("Unexpected request code");
-    }
   }
 
   private void dispatchImageCaptureIntent() {
@@ -105,6 +85,32 @@ public class HomeActivity extends AppCompatActivity {
         cameraIntent.putExtra(MediaStore.EXTRA_OUTPUT, photoFileUri);
         startActivityForResult(cameraIntent, CAMERA_RESULT);
       }
+    }
+  }
+
+  @Override public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions,
+      @NonNull int[] grantResults) {
+    super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+    switch (requestCode) {
+      case CAMERA_PERMISSION_REQ_CODE:
+        if (grantResults[0] == PERMISSION_GRANTED) {
+          dispatchImageCaptureIntent();
+        } else {
+          Toast.makeText(this, "Required camera permission not granted", Toast.LENGTH_SHORT).show();
+        }
+        break;
+
+      case STORAGE_PERMISSION_REQ_CODE:
+        if (grantResults[0] == PERMISSION_GRANTED) {
+          dispatchGalleryIntent();
+        } else {
+          Toast.makeText(this, "Required storage permission not granted", Toast.LENGTH_SHORT)
+              .show();
+        }
+        break;
+
+      default:
+        throw new IllegalArgumentException("Unexpected request code");
     }
   }
 
@@ -129,7 +135,7 @@ public class HomeActivity extends AppCompatActivity {
     if (resultCode == RESULT_OK) {
       if (requestCode == GALLERY_RESULT) {
         Uri imageUri = data.getData();
-        startActivity(MainActivity.getIntent(this, uriToBundle(imageUri)));
+        startActivity(MainActivity.getIntent(this, uriToBundle(Objects.requireNonNull(imageUri))));
       } else if (requestCode == CAMERA_RESULT) {
         if (data != null) {
           File imageFile = new File(mCapturedImagePath);
