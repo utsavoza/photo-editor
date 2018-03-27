@@ -46,7 +46,7 @@ public class HomeActivity extends AppCompatActivity {
   public void openCamera(View view) {
     // check for camera permission if not granted before
     if (ContextCompat.checkSelfPermission(this, CAMERA) != PERMISSION_GRANTED) {
-      String[] cameraPermission = {CAMERA};
+      String[] cameraPermission = { CAMERA };
       ActivityCompat.requestPermissions(this, cameraPermission, CAMERA_PERMISSION_REQ_CODE);
     } else {
       dispatchImageCaptureIntent();
@@ -57,7 +57,7 @@ public class HomeActivity extends AppCompatActivity {
     // check for storage permission if not granted before
     if (ContextCompat.checkSelfPermission(this, READ_EXTERNAL_STORAGE) != PERMISSION_GRANTED ||
         ContextCompat.checkSelfPermission(this, WRITE_EXTERNAL_STORAGE) != PERMISSION_GRANTED) {
-      String[] storagePermissions = {READ_EXTERNAL_STORAGE, WRITE_EXTERNAL_STORAGE};
+      String[] storagePermissions = { READ_EXTERNAL_STORAGE, WRITE_EXTERNAL_STORAGE };
       ActivityCompat.requestPermissions(this, storagePermissions, STORAGE_PERMISSION_REQ_CODE);
     } else {
       dispatchGalleryIntent();

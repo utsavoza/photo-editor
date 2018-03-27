@@ -3,8 +3,9 @@ buildscript {
     jcenter()
     google()
   }
+
   dependencies {
-    classpath 'com.android.tools.build:gradle:3.1.0-rc03'
+    classpath 'com.android.tools.build:gradle:3.1.0'
     classpath 'me.tatarka:gradle-retrolambda:3.3.0-beta4'
   }
 }
@@ -12,7 +13,7 @@ buildscript {
 allprojects {
   repositories {
     jcenter()
-
+    google()
     mavenCentral()
 
     maven {
@@ -22,7 +23,6 @@ allprojects {
     maven {
       url 'http://maven.localytics.com/public'
     }
-    google()
   }
 }
 

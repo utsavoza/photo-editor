@@ -13,8 +13,10 @@ import com.alienage.android.imageeditor.R;
 public class MainActivity extends AppCompatActivity {
 
   public static final String IMAGE_URI = "IMAGE_URI_KEY";
+
   private static final String TAG = "MainActivity";
   private static final int IMAGE_EDITOR_RESULT = 1;
+
   private ImageView mEditedImageView;
 
   @Override protected void onCreate(Bundle savedInstanceState) {
