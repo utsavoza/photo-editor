@@ -5,8 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/blackPrimary"
-    tools:context="com.utsavoza.imageeditor.HomeActivity"
-    >
+    tools:context="com.utsavoza.photoeditor.HomeActivity">
 
   <ImageView
       android:id="@+id/home_background"
@@ -14,8 +13,7 @@
       android:layout_height="250dp"
       android:layout_centerInParent="true"
       android:scaleType="centerCrop"
-      android:src="@drawable/astro_background"
-      />
+      android:src="@drawable/astro_background"/>
 
   <LinearLayout
       android:id="@+id/title_home"
@@ -23,23 +21,20 @@
       android:layout_height="wrap_content"
       android:layout_centerHorizontal="true"
       android:layout_marginTop="75dp"
-      android:gravity="center"
-      >
+      android:gravity="center">
 
     <ImageView
         android:id="@+id/home_logo"
         android:layout_width="@dimen/logo_width"
         android:layout_height="@dimen/logo_height"
-        android:src="@drawable/logo"
-        />
+        android:src="@drawable/logo"/>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/app_name"
         android:textColor="@color/whitePrimary"
-        android:textSize="25sp"
-        />
+        android:textSize="25sp"/>
   </LinearLayout>
 
   <LinearLayout
@@ -49,14 +44,12 @@
       android:layout_below="@id/title_home"
       android:layout_centerHorizontal="true"
       android:layout_marginBottom="25dp"
-      android:gravity="bottom"
-      >
+      android:gravity="bottom">
 
     <RelativeLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="65dp"
-        >
+        android:layout_marginEnd="65dp">
 
       <ImageView
           android:id="@+id/camera_button_image"
@@ -64,8 +57,7 @@
           android:layout_height="40dp"
           android:layout_centerHorizontal="true"
           android:onClick="openCamera"
-          android:src="@drawable/ic_camera_alt_white"
-          />
+          android:src="@drawable/ic_camera_alt_white"/>
 
       <TextView
           android:id="@+id/camera_button_text"
@@ -75,15 +67,13 @@
           android:layout_marginTop="7dp"
           android:onClick="openCamera"
           android:text="@string/camera_button_text"
-          android:textColor="@color/whitePrimary"
-          />
+          android:textColor="@color/whitePrimary"/>
 
     </RelativeLayout>
 
     <RelativeLayout
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        >
+        android:layout_height="wrap_content">
 
       <ImageView
           android:id="@+id/gallery_button_image"
@@ -91,8 +81,7 @@
           android:layout_height="40dp"
           android:layout_centerHorizontal="true"
           android:onClick="openGallery"
-          android:src="@drawable/ic_phone_android_white"
-          />
+          android:src="@drawable/ic_phone_android_white"/>
 
       <TextView
           android:id="@+id/gallery_button_text"
@@ -102,8 +91,7 @@
           android:layout_marginTop="7dp"
           android:onClick="openGallery"
           android:text="@string/gallery_button_text"
-          android:textColor="@color/whitePrimary"
-          />
+          android:textColor="@color/whitePrimary"/>
     </RelativeLayout>
 
   </LinearLayout>

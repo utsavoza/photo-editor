@@ -1,4 +1,4 @@
-package com.utsavoza.imageeditor;
+package com.utsavoza.photoeditor;
 
 import android.content.Context;
 import android.content.Intent;
@@ -15,7 +15,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
-import com.alienage.android.imageeditor.R;
 import java.io.File;
 import java.io.IOException;
 import java.text.DateFormat;
@@ -32,7 +31,7 @@ public class HomeActivity extends AppCompatActivity {
   private static final String TAG = "HomeActivity";
   private static final int GALLERY_RESULT = 1;
   private static final int CAMERA_RESULT = 2;
-  private static final String FILE_PROVIDER_AUTHORITY = "com.utsavoza.imageeditor";
+  private static final String FILE_PROVIDER_AUTHORITY = "com.utsavoza.photoeditor";
   private static final int CAMERA_PERMISSION_REQ_CODE = 1001;
   private static final int STORAGE_PERMISSION_REQ_CODE = 1002;
 

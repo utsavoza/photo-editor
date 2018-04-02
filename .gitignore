@@ -6,4 +6,4 @@
 /build
 /captures
 .externalNativeBuild
-/image-editor/src/main/java/com/utsavoza/imageeditor/Keys.java
+/photo-editor/src/main/java/com/utsavoza/photoeditor/Keys.java

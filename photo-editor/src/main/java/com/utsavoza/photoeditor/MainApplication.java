@@ -1,4 +1,4 @@
-package com.utsavoza.imageeditor;
+package com.utsavoza.photoeditor;
 
 import android.app.Application;
 

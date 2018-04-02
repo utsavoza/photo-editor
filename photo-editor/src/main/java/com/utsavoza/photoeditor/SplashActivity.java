@@ -1,9 +1,8 @@
-package com.utsavoza.imageeditor;
+package com.utsavoza.photoeditor;
 
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import com.alienage.android.imageeditor.R;
 
 /** A dummy splash screen activity. */
 public class SplashActivity extends AppCompatActivity {

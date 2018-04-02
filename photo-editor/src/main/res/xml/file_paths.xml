@@ -2,5 +2,5 @@
 <paths>
   <external-path
       name="my_images"
-      path="Android/data/com.utsavoza.imageeditor/files/Pictures"/>
+      path="Android/data/com.utsavoza.photoeditor/files/Pictures"/>
 </paths>

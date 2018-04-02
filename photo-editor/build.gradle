@@ -5,12 +5,11 @@ android {
   compileSdkVersion 25
   buildToolsVersion '27.0.3'
   defaultConfig {
-    applicationId 'com.utsavoza.imageeditor'
+    applicationId 'com.utsavoza.photoeditor'
     minSdkVersion 19
     targetSdkVersion 25
     versionCode 1
     versionName "1.0"
-    testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     manifestPlaceholders = [appPackageName: "${applicationId}"]
   }
 

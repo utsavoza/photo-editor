@@ -1,4 +1,4 @@
-package com.utsavoza.imageeditor;
+package com.utsavoza.photoeditor;
 
 import android.content.Context;
 import android.content.Intent;
@@ -8,7 +8,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.widget.ImageView;
 import com.adobe.creativesdk.aviary.AdobeImageIntent;
-import com.alienage.android.imageeditor.R;
 
 public class MainActivity extends AppCompatActivity {
 

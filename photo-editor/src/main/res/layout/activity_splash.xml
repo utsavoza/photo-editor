@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/whitePrimary"
-    tools:context="com.utsavoza.imageeditor.SplashActivity">
+    tools:context="com.utsavoza.photoeditor.SplashActivity">
 
   <ImageView
       android:layout_width="150dp"

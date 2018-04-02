@@ -1,1 +1,3 @@
-include ':image-editor'
+include ':photo-editor'
+
+rootProject.name = 'photo-editor-parent'
