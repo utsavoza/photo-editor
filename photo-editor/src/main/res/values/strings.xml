@@ -1,5 +1,12 @@
 <resources>
   <string name="app_name">Photo Editor</string>
+
   <string name="camera_button_text">Camera</string>
   <string name="gallery_button_text">Gallery</string>
+
+  <string name="astronaut_content_desc">astronaut</string>
+  <string name="app_logo_content_desc">logo</string>
+  <string name="camera_button_content_desc">camera_button_image</string>
+  <string name="gallery_button_content_desc">gallery_button_image</string>
+  <string name="edited_image_content_desc">edited_image</string>
 </resources>

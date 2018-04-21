@@ -12,6 +12,7 @@
       android:layout_width="250dp"
       android:layout_height="250dp"
       android:layout_centerInParent="true"
+      android:contentDescription="@string/astronaut_content_desc"
       android:scaleType="centerCrop"
       android:src="@drawable/astro_background"/>
 
@@ -21,12 +22,14 @@
       android:layout_height="wrap_content"
       android:layout_centerHorizontal="true"
       android:layout_marginTop="75dp"
-      android:gravity="center">
+      android:gravity="center"
+      tools:ignore="UseCompoundDrawables">
 
     <ImageView
         android:id="@+id/home_logo"
         android:layout_width="@dimen/logo_width"
         android:layout_height="@dimen/logo_height"
+        android:contentDescription="@string/app_logo_content_desc"
         android:src="@drawable/logo"/>
 
     <TextView
@@ -56,6 +59,7 @@
           android:layout_width="40dp"
           android:layout_height="40dp"
           android:layout_centerHorizontal="true"
+          android:contentDescription="@string/camera_button_content_desc"
           android:onClick="openCamera"
           android:src="@drawable/ic_camera_alt_white"/>
 
@@ -68,7 +72,6 @@
           android:onClick="openCamera"
           android:text="@string/camera_button_text"
           android:textColor="@color/whitePrimary"/>
-
     </RelativeLayout>
 
     <RelativeLayout
@@ -80,6 +83,7 @@
           android:layout_width="40dp"
           android:layout_height="40dp"
           android:layout_centerHorizontal="true"
+          android:contentDescription="@string/gallery_button_content_desc"
           android:onClick="openGallery"
           android:src="@drawable/ic_phone_android_white"/>
 

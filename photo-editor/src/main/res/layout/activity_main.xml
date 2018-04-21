@@ -11,6 +11,7 @@
       android:id="@+id/edited_image_view"
       android:layout_width="match_parent"
       android:layout_height="match_parent"
-      android:adjustViewBounds="true"/>
+      android:adjustViewBounds="true"
+      android:contentDescription="@string/edited_image_content_desc"/>
 
 </LinearLayout>
